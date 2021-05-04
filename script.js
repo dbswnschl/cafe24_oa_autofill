@@ -22,13 +22,15 @@ window.onload = function (){
         }
         let profile = {
             'username' : '',
-            'password' : ''
+            'password' : '',
+            'msg': ''
         };
         if (data.profile) {
             profile = JSON.parse(data.profile);
         }
         document.getElementById('username').value = profile.username;
         document.getElementById('password').value = profile.password;
+        document.getElementById('msg').value = profile.msg;
 
     });
 
@@ -40,13 +42,16 @@ window.onload = function (){
     this.document.getElementById('saveProfile').addEventListener('click', function(){
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
+        let msg = document.getElementById('msg').value;
         let profile = {
             'username' : username,
-            'password' : password
+            'password' : password,
+            'msg':msg
         }
         browser.storage.sync.set({
             profile: JSON.stringify(profile)
         });
+        document.getElementById('response').innerText = '저장되었습니다!';
     });
 
 };
