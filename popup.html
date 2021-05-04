@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type='text/css'>
+    <script src="script.js"></script>
+    <style>
+        body {
+            height: auto;
+            width: 400px;
+            padding: 1.5rem;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="custom-control custom-switch">
+        <input type="checkbox" class="custom-control-input" id="onoffswitch">
+        <label id="auth_toggle" class="custom-control-label" for="onoffswitch" style="font-size: large;font-weight: bold;">OA 자동완성 ON/OFF</label>
+    </div>
+    <hr/>
+    <div class="input-group mb-3">
+        <input id='username' type="text" class="form-control" placeholder="username" aria-label="Username"
+            aria-describedby="basic-addon1" required="required">
+    </div>
+    <div class="input-group mb-3">
+        <input id='password' type="password" class="form-control" placeholder="password" aria-label="Password"
+            aria-describedby="basic-addon1" required="required">
+    </div>
+    <hr/>
+    <button id='saveProfile' type="button" class="btn btn-light">저장</button>
+</body>
+</html>

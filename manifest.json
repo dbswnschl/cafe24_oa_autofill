@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "원격접속 인증 자동완성 (OA Autofill)",
+    "version": "0.0.1",
+    "description": "원격접속 인증 페이지 자동완성",
+    "homepage_url": "https://github.com/dbswnschl",
+    "author": "최윤준",
+    "icons": {
+        "128": "icon.png"
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "autofill.js"
+            ],
+            "matches": [
+                "https://oa.cafe24web.com/*"
+            ],
+            "run_at": "document_start"
+        }
+    ]
+}
